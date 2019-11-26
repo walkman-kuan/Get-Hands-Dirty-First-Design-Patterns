@@ -7,15 +7,15 @@ import main.strategy.models.Duck;
 import main.strategy.models.MallardDuck;
 
 public class StrategyTest {
-    public static void main(String[] args) {
-        Duck mallard = new MallardDuck(new FlyNoWay(), new Quack());
-        mallard.display();
-        mallard.performFly();
-        mallard.performQuack();
+  public static void main(String[] args) {
+    Duck mallard = new MallardDuck(new FlyNoWay(), new Quack());
+    mallard.display();
+    mallard.performFly();
+    mallard.performQuack();
 
-        // Change behavior dynamically at runtime
-        System.out.println("Human being modify my gene! Suddenly, I can");
-        mallard.setFlyBehavior(new FlyWithWings());
-        mallard.performFly();
-    }
+    // Change behavior dynamically at runtime
+    System.out.println("Human being modify my gene! Suddenly, I can");
+    mallard.setFlyBehavior(new FlyWithWings());
+    mallard.performFly();
+  }
 }
